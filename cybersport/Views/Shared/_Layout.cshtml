@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Hello from view</title>
+    <link rel="stylesheet" href="~/css/bulma.min.css">
+    <style>
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        li {
+            float: left;
+        }
+
+            li a {
+                display: block;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+
+                li a:hover:not(.active) {
+                    background-color: #111;
+                }
+
+        .active {
+            background-color: #4CAF50;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar" role="navigation" aria-label="main navigation">
+           
+
+            <div id="navbarBasicExample" class="navbar-menu">
+                <div class="navbar-start">
+
+                    <div id='cssmenu' style="padding: 15px ; font-size: 20px; border-radius: 20px;">
+                        <ul>
+                            <li><a href="/Games"><span>Games</span></a></li>
+                            <li> <a href="/NameOfGames"><span>NameOfGames</span></a></li>
+                            <li> <a href="/PlayingGames"><span>PlayingGames</span></a></li>
+                            <li> <a href="/Players"><span>Players</span></a></li>
+
+                            <li> <a href="/Genres"><span>Genres</span></a></li>
+                            <li> <a href="/Leagues"><span>Leagues</span></a></li>
+                            <li> <a href="/Managers"><span>Managers</span></a></li>
+                            <li> <a href="/Teams"><span>Teams</span></a></li>
+                            <partial name="_LoginPartial" />
+                        </ul>
+                    </div>
+
+                </div>
+
+                <div class="navbar-end">
+                    <div class="navbar-item">
+                        <div class="buttons">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div class="container">
+        @RenderBody()
+    </div>
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            <p>&copy; 2020 Cyber Sport League </p>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

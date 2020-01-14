@@ -1,0 +1,23 @@
+﻿
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>About session</title>
+</head>
+<body>
+    <div>
+        @{
+            if(@ViewData["session"] == null)
+            {
+                <h3>No session</h3>
+            }
+            else 
+            {
+                <h3>Session: @ViewData["session"]</h3>
+            }
+         }
+    </div>
+</body>
+</html>
+

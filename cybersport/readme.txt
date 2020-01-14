@@ -1,0 +1,2 @@
+﻿This project will show the championships between different games,will give information about teams, players and so on.
+Here you will be able to find which game is played by some players or what kind of games covers some team
